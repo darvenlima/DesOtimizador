@@ -1,4 +1,4 @@
-# Otimizador ope-source para simulação de eventos discretos
+# Otimizador open-source para simulação de eventos discretos
 
 
 O objetivo desse trabalho foi desenvolver uma ferramenta open-source de  Otimização para simulação de eventos discretos. Para auxiliar projetos na área de otimização via simulação, tanto para empresas que não possuem softwares comerciais e para pesquisadores da área. 
