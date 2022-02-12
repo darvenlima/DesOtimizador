@@ -7,9 +7,9 @@ O objetivo desse trabalho foi desenvolver uma ferramenta open-source de  Otimiza
 
 O funcionamento do otimizador se utiliza de um algoritmo genético como meta-heurística, uma rede neural para criar o metamodelo, assim acelerando o tempo de execução do código. A forma de conectar o modelo de siulação com o código de otimização ocorre via arquivos externos (.txt), para disponibilizar maior flexibilidade na linguagens que podem ser usadas para a modelagem computacional, atualmente pode ser utlizado python, R, C e C++ 
 
-<div align="center">
+
 ![fluxo_software](https://user-images.githubusercontent.com/48968629/153720015-0f57b7f3-c947-41c5-bcd4-0c8528dd0e0a.jpg)  
-<\div>
+
 
 # Como utilizar o projeto 
 
@@ -24,7 +24,7 @@ Pré-requisitos: python 3.9
 clonar repositório em uma pasta vazia:
 git clone https://github.com/darvenlima/OtimizadorDES
 
-para executar o projeto, existe na pasta dist o executável do código, porém ele ainda possui muita lentidão e necessita de melhorias.
-Mas é possível utiliza-lo executando pela interface gráfica. Na pasta do projeto execute o comando:
+Após a clonagem do do repositório e com o python 3.9 installado, é necessario fazer a instalação das bibliotecas usadas no código antes da primeira utilização. Todas as instalações necessárias estão no arquivo bibliotecas.txt. Com a instalação completa, pode realizar a execução do código com o comando:
 
 python .\interface.py
+
