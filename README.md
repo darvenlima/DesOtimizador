@@ -7,6 +7,10 @@ O objetivo desse trabalho foi desenvolver uma ferramenta open-source de  Otimiza
 
 O funcionamento do otimizador se utiliza de um algoritmo genético como meta-heurística, uma rede neural para criar o metamodelo, assim acelerando o tempo de execução do código. A forma de conectar o modelo de siulação com o código de otimização ocorre via arquivos externos (.txt), para disponibilizar maior flexibilidade na linguagens que podem ser usadas para a modelagem computacional, atualmente pode ser utlizado python, R, C e C++ 
 
+<div align="center">
+![fluxo_software](https://user-images.githubusercontent.com/48968629/153720015-0f57b7f3-c947-41c5-bcd4-0c8528dd0e0a.jpg)  
+<\div>
+
 # Como utilizar o projeto 
 
 Antes de iniciar o uso do otimizador, deve-se adaptar o código da simulação com a leitura e escrita dos arquivos .txt.
