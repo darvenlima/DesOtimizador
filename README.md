@@ -22,7 +22,7 @@ Para acessar otimizador:
 Pré-requisitos: python 3.9 
 
 clonar repositório em uma pasta vazia:
-git clone https://github.com/darvenlima/OtimizadorDES
+git clone https://github.com/darvenlima/DesOtimizador
 
 Após a clonagem do do repositório e com o python 3.9 installado, é necessario fazer a instalação das bibliotecas usadas no código antes da primeira utilização. Todas as instalações necessárias estão no arquivo bibliotecas.txt. Com a instalação completa, pode realizar a execução do código com o comando:
 
