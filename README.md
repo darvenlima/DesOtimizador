@@ -39,3 +39,4 @@ A segunda tela, mostra as variáveis de entrada do problema, que o usuário pode
 
 AS ultimas duas telas são para inserir as restrições do problema e sua função objetivo, onde na parte superior mostra a lista das variáveis de entrada e saída para construir as restrições e a função objetivo.
 
+![fig_interface_restricoes](https://user-images.githubusercontent.com/48968629/153722668-ea4f0f97-b1ed-4281-b0fa-274030d4b80d.jpg)
