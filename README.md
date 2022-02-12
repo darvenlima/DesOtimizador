@@ -28,7 +28,14 @@ Após a clonagem do do repositório e com o python 3.9 installado, é necessario
 
 python .\interface.py
 
-Executando o código abrira a sua interface gráfica, onde no canto esquerdo fica as os botões de cada uma das telas. A primeira tela a ser usada deve ser a tela de endereço da simulação, para inserir o endereço do código de simulação e os arquivos .txt de entrada e de saída. Caso o usuário desenvolvel a simulação naslinguagens python e R, deve passar o endereço dos arquivos .py e .R respectivamente, já se for utilizado as linguagens C e C++, precisa ser passado o arquivo .exe que é gerado após a compilação do código.
+Executando o código abrira a sua interface gráfica, onde no canto esquerdo fica as os botões de cada uma das telas. A primeira tela a ser usada deve ser a tela de endereço da simulação, para inserir o endereço do código de simulação e os arquivos .txt de entrada e de saída. Caso o usuário desenvolvel a simulação naslinguagens python e R, deve passar o endereço dos arquivos .py e .R respectivamente, já se for utilizado as linguagens C e C++, precisa ser passado o arquivo .exe que é gerado após a compilação do código. Após inserir os três arquivos clique no botão aplicar para salvar os endereços. 
 
 
 ![fig_interface_simu](https://user-images.githubusercontent.com/48968629/153720578-a153a893-2607-4689-bc27-f945d085fcf2.jpg)
+
+A segunda tela, mostra as variáveis de entrada do problema, que o usuário pode selecionar quais são os limites inferior e superior de cada variável (a marquem onde o valor dessa veriável pode variar), e definir se a variável é continua po inteira.  
+
+![fig_interface_variaveis](https://user-images.githubusercontent.com/48968629/153722035-aeff59de-4d56-471f-9ba8-118bb982535e.jpg)
+
+AS ultimas duas telas são para inserir as restrições do problema e sua função objetivo, onde na parte superior mostra a lista das variáveis de entrada e saída para construir as restrições e a função objetivo.
+
