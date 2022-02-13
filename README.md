@@ -28,7 +28,7 @@ Após a clonagem do repositório e com o python 3.9 instalado, é necessário fa
 
 python .\interface.py
 
-Executando o código abrira a sua interface gráfica, onde no canto esquerdo fica os botões de cada uma das telas. A primeira tela a ser usada deve ser a tela de endereço da simulação, para inserir o endereço do código de simulação e os arquivos .txt de entrada e de saída. Caso o usuário desenvolve a simulação nas linguagens python e R, deve passar o endereço dos arquivos .py e .R respectivamente, já se for utilizado as linguagens C e C++, precisa ser passado o arquivo .exe que é gerado após a compilação do código. Após inserir os três arquivos, clique no botão aplicar para salvar os endereços.
+Executando o código abrira a sua interface gráfica, onde no canto esquerdo fica os botões de cada uma das telas. A primeira tela a ser usada deve ser a tela de endereço da simulação, para inserir o endereço do código de simulação e os arquivos .txt de entrada e de saída. Caso o usuário desenvolve a simulação nas linguagens python e R, deve passar o endereço dos arquivos .py e .R respectivamente, se for utilizado as linguagens C e C++, precisa ser passado o arquivo .exe que é gerado após a compilação do código. Após inserir os três arquivos, clique no botão aplicar para salvar os endereços.
 
 ![fig_interface_simu](https://user-images.githubusercontent.com/48968629/153720578-a153a893-2607-4689-bc27-f945d085fcf2.jpg)
 
