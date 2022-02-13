@@ -1,3 +1,4 @@
+
 from tkinter import *
 from tkinter import ttk
 import tkinter.font as tkFont
@@ -7,7 +8,6 @@ import math
 import statistics
 from scipy.stats import t
 import time
-import csv
 import os
 
 import numpy as np
@@ -72,7 +72,7 @@ class interface(Tk):
         self.AreaOpcoes = Frame (self, width = 1350, height = 100, relief = "raise")
         self.AreaOpcoes.place(x = 0, y = 0)
 
-        self.rodar_simu = Button(self.AreaOpcoes, width = 20,text = "play",command = self.enviar_dados)
+        self.rodar_simu = Button(self.AreaOpcoes, width = 20,text = "resolver",command = self.enviar_dados)
         self.rodar_simu.place(x=500, y=50)
         self.AreaBotoes = Frame (self, width = 200, height = 598, relief = "raise")
         self.AreaBotoes.place(x = 0, y = 102)
@@ -80,16 +80,16 @@ class interface(Tk):
         self.AreaTrabalho = Frame (self, width = 1148, height = 598, relief = "raise")
         self.AreaTrabalho.place(x = 202, y= 102)
 
-        self.linguagem = Button(self.AreaBotoes, width = 20, text = "endereco da simalcao", command = self.tela_simulacao)
+        self.linguagem = Button(self.AreaBotoes, width = 20, text = "Endereço da simulação", command = self.tela_simulacao)
         self.linguagem.place(x=10, y=20)
 
-        self.variaveis_entrada = Button(self.AreaBotoes, width = 20, text = "variaveis de entrada", command = self.tela_variaveis)
+        self.variaveis_entrada = Button(self.AreaBotoes, width = 20, text = "Variáveis de entrada", command = self.tela_variaveis)
         self.variaveis_entrada.place(x=10, y=50)
 
-        self.variaveis_saida = Button(self.AreaBotoes, width = 20, text = "variaveis de saida", command = self.tela_variaveis_saida)
+        self.variaveis_saida = Button(self.AreaBotoes, width = 20, text = "Variáveis de saida", command = self.tela_variaveis_saida)
         self.variaveis_saida.place(x=10, y=80)
 
-        self.retricoes = Button(self.AreaBotoes, width = 20, text = "restricoes", command = self.funcao_restricoes_inicial)
+        self.retricoes = Button(self.AreaBotoes, width = 20, text = "restrições", command = self.funcao_restricoes_inicial)
         self.retricoes.place(x=10, y=110)
 
         self.FO = Button(self.AreaBotoes, width = 20, text = "função objetivo", command = self.funcao_tela_inicial_FO)
@@ -379,7 +379,7 @@ class interface(Tk):
         print(f"resposta_meta: {len(resposta_meta)}")
         print(f"inicio_neural: {inicio_neural}")
 
-        
+
 
     def analise_dados_simulacao(self):
 
@@ -392,7 +392,8 @@ class interface(Tk):
         dados_entrada = arquivo_entrada.read()
         dados_entrada = dados_entrada.split("\n")
         dados_entrada[0] = dados_entrada[0].split(",")
-
+        self.dados_variaveis = []
+        
         for i in range(0,len(dados_entrada[0])):
             self.dados_variaveis.append([])
             for j in range(0,4):
@@ -404,6 +405,7 @@ class interface(Tk):
         dados_saida = dados_saida.split("\n")
         dados_saida[0] = dados_saida[0].split(",")
 
+        self.dados_variaveis_saida = []
         for i in range(0,len(dados_saida[0])):
             self.dados_variaveis_saida.append(StringVar())
             self.dados_variaveis_saida[i].set(dados_saida[0][i])
@@ -415,7 +417,7 @@ class interface(Tk):
         self.texto_linguagem.place(x=100,y=10)
         self.menu_linguagens = OptionMenu(self.dados_simulacao,self.ling,"python","R","C","C++")
         self.menu_linguagens.place(x=200,y=10)
-        self.texto_end_simu = Label(self.dados_simulacao, text = "endereço simulação")
+        self.texto_end_simu = Label(self.dados_simulacao, text = "endereço da simulação")
         self.texto_end_simu.place(x=10,y=100)
         self.endereco_simu = Entry(self.dados_simulacao)
         self.endereco_simu.place(x = 200, y= 100, width = 500)
@@ -441,11 +443,11 @@ class interface(Tk):
         #self.atulizar_var.place(x=200,y =30)
         self.tabela_var = Frame(self.tela_variaveis, width = 500, height = 300, relief = "raise" )
         self.tabela_var.place(x = 30, y= 100)
-        self.label_min = Label(self.tabela_var ,text = "valor minimo")
+        self.label_min = Label(self.tabela_var ,text = "valor mínimo")
         self.label_min.grid(row=0,column = 0)
         self.label_nome = Label(self.tabela_var ,text = "nome")
         self.label_nome.grid(row=0,column = 1)
-        self.label_max = Label(self.tabela_var ,text = "valor maximo")
+        self.label_max = Label(self.tabela_var ,text = "valor máximo")
         self.label_max.grid(row=0,column = 2)
         self.label_tipo = Label(self.tabela_var ,text = "tipo")
         self.label_tipo.grid(row=0,column = 3)
@@ -459,7 +461,7 @@ class interface(Tk):
             self.lista_entry_variaveis[i].append(Entry(self.tabela_var, textvariable= self.dados_variaveis[i][2]))
             self.lista_entry_variaveis[i][2].grid(row=i+1, column = 2)
             self.tipo_variavel = StringVar(self.tabela_var)
-            self.lista_entry_variaveis[i].append(OptionMenu(self.tabela_var,self.dados_variaveis[i][3],"continuo","inteiro"))
+            self.lista_entry_variaveis[i].append(OptionMenu(self.tabela_var,self.dados_variaveis[i][3],"contínuo","inteiro"))
             self.lista_entry_variaveis[i][3].grid(row=i+1, column = 3)
     """
     def subir_variavel(self, n):
@@ -590,7 +592,7 @@ class interface(Tk):
             self.tabela_restricoes = Button(self.tela_lista_restricao ,text = self.lista_restricoes[i].get(), command = partial(self.funcao_restricoes, i))
             self.tabela_restricoes.grid(row=i,column = 0)
         print(self.lista_restricoes)
-        self.criar_restricao = Button(self.tela_restricoes_inicial , width = 20, text = "criar restricao", command = partial(self.funcao_restricoes, len(self.lista_restricoes)) )
+        self.criar_restricao = Button(self.tela_restricoes_inicial , width = 20, text = "criar restrição", command = partial(self.funcao_restricoes, len(self.lista_restricoes)) )
         self.criar_restricao.place(x=100,y =450)
     def teste2(self):
         #self.tela_restricoes.reset()
@@ -623,7 +625,7 @@ class interface(Tk):
             self.linguagem_saida.grid(row=i,column = 0)
             self.button_identities_saida.append(self.linguagem_saida)
 
-        self.salvar_restricao = Button(self.tela_restricoes , width = 20, text = "salvar restricao", command = self.funcao_restricoes_inicial )
+        self.salvar_restricao = Button(self.tela_restricoes , width = 20, text = "salvar restrição", command = self.funcao_restricoes_inicial )
         self.salvar_restricao.place(x=100,y = 450)
 
         self.restricao = Entry(self.tela_restricoes, width = 100, textvariable= self.lista_restricoes[num_res])
@@ -637,7 +639,7 @@ class interface(Tk):
         self.tabela_var_fo = Frame(self.tela_inicial_FO, width = 500, height = 300, relief = "raise" )
         self.tabela_var_fo.place(x = 30, y= 100)
 
-        self.label_max_min = Label(self.tabela_var_fo ,text = "maximo ou minino")
+        self.label_max_min = Label(self.tabela_var_fo ,text = "máximo ou mínino")
         self.label_max_min.grid(row=0,column = 0)
         self.label_funcao = Label(self.tabela_var_fo ,text = "função")
         self.label_funcao.grid(row=0,column = 1)
@@ -674,7 +676,7 @@ class interface(Tk):
 
 
 
-        self.salvar_FO = Button(self.tela_FO , width = 20, text = "salvar restricao", command = self.funcao_tela_inicial_FO)
+        self.salvar_FO = Button(self.tela_FO , width = 20, text = "salvar restrição", command = self.funcao_tela_inicial_FO)
         self.salvar_FO.place(x=100,y = 450)
 
         self.restricao = Entry(self.tela_FO, width = 100, textvariable= self.equacao_FO)

@@ -1,0 +1,15 @@
+pip install tk
+pip install functools
+pip install regex
+pip install python-math
+pip install statistics
+pip install numpy
+pip install matplotlib
+pip install scipy
+pip install tensorflow
+pip install keras
+pip install rpy2
+pip install sympy
+pip install subprocess.run
+pip install scikit-learn
+pip install os-sys
