@@ -43,6 +43,6 @@ AS ultimas duas telas são para inserir as restrições do problema e sua funç�
 
 
 
-Com todas as informações inseridas, o usuário pode clicar no botão "play" para iniciar a simulação.
+Com todas as informações inseridas, o usuário pode clicar no botão "resolver" para iniciar a simulação.
 
 
