@@ -41,14 +41,8 @@ AS ultimas duas telas são para inserir as restrições do problema e sua funç�
 
 ![fig_interface_restricoes](https://user-images.githubusercontent.com/48968629/153722668-ea4f0f97-b1ed-4281-b0fa-274030d4b80d.jpg)
 
-<<<<<<< HEAD
+
 
 Com todas as informações inseridas, o usuário pode clicar no botão "play" para iniciar a simulação.
 
-=======
-<<<<<<< HEAD
-Com todas as informações inseridas, o usuário pode clicar no botão "resolver" para iniciar a simulação.
-=======
-Com todas as informações inseridas, o usuário pode clicar no botão "resolver" para iniciar a simulação.
->>>>>>> ffbb35b1f6732ef05dd343a24d6996a13ec7e143
->>>>>>> 86602d9e65e6b9d1db60956c67d256863f14e54d
+
